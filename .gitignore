@@ -1,0 +1,13 @@
+bin
+obj
+*.json
+*.sql
+*.txt
+*.suo
+*.csproj.user
+*.user
+_ReSharper*
+compare.cmd
+data/*.txt
+data/*.doc
+TestResults
