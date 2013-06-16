@@ -9,17 +9,17 @@ In Functional Programming, "Higher Order Functions" are functions that take othe
 
 #### HighRegex supports:
 
-* Classes of arbitrary data types.  Matches exactly 1 position. (See [IClass](blob/master/HighRegex/IClass.cs))
-* Expressions of arbitrary data types.  Matches exactly 0 or more positions. (See [IExpression](blob/master/HighRegex/IExpression.cs))
-* Custom classes `[left straight]`, `[^right]` (See [SetClass](blob/master/HighRegex/SetClass.cs) and [NotClass](blob/master/HighRegex/NotClass.cs))
-* Any class `.` (See [AnyClass](blob/master/HighRegex/AnyClass.cs))
-* Repetition `straight+`, 'left{3,6}' (See [GreedyRepeatExpression](blob/master/HighRegex/GreedyRepeatExpression.cs))
-* Optionals and lazy repetition `straight?`, `straight??`, 'left{3,6}?'  (See [RepeatExpression](blob/master/HighRegex/RepeatExpression.cs))
-* Alternation `left|right`, `right|straight'  (See [AlternationExpression](blob/master/HighRegex/AlternationExpression.cs))
-* Sequential `a b c`, `right left`  (See [ListExpression](blob/master/HighRegex/ListExpression.cs))
-* Atomic anchors begining `^` and end `$` of sequence.  (See [StartExpression](blob/master/HighRegex/StartExpression.cs) and [EndExpression](blob/master/HighRegex/EndExpression.cs))
-* Atomic look ahead `(?=left)` and negatives (?!right)`.  (See [LookAheadExpression](blob/master/HighRegex/LookAheadExpression.cs) and [NegativeLookAheadExpression](blob/master/HighRegex/NegativeLookAheadExpression.cs))
-* Atomic look behind `(?<=left)` and negatives `(?<!right)`.  (See [LookBackExpression](blob/master/HighRegex/LookBackExpression.cs) and [NegativeLookBackExpression](blob/master/HighRegex/NegativeLookBackExpression.cs))
+* Classes of arbitrary data types.  Matches exactly 1 position. (See [IClass](HighRegex/IClass.cs))
+* Expressions of arbitrary data types.  Matches exactly 0 or more positions. (See [IExpression](HighRegex/IExpression.cs))
+* Custom classes `[left straight]`, `[^right]` (See [SetClass](HighRegex/SetClass.cs) and [NotClass](HighRegex/NotClass.cs))
+* Any class `.` (See [AnyClass](HighRegex/AnyClass.cs))
+* Repetition `straight+`, 'left{3,6}' (See [GreedyRepeatExpression](HighRegex/GreedyRepeatExpression.cs))
+* Optionals and lazy repetition `straight?`, `straight??`, 'left{3,6}?'  (See [RepeatExpression](HighRegex/RepeatExpression.cs))
+* Alternation `left|right`, `right|straight'  (See [AlternationExpression](HighRegex/AlternationExpression.cs))
+* Sequential `a b c`, `right left`  (See [ListExpression](HighRegex/ListExpression.cs))
+* Atomic anchors begining `^` and end `$` of sequence.  (See [StartExpression](HighRegex/StartExpression.cs) and [EndExpression](HighRegex/EndExpression.cs))
+* Atomic look ahead `(?=left)` and negatives (?!right)`.  (See [LookAheadExpression](HighRegex/LookAheadExpression.cs) and [NegativeLookAheadExpression](HighRegex/NegativeLookAheadExpression.cs))
+* Atomic look behind `(?<=left)` and negatives `(?<!right)`.  (See [LookBackExpression](HighRegex/LookBackExpression.cs) and [NegativeLookBackExpression](HighRegex/NegativeLookBackExpression.cs))
 
 #### HighRegex does not support:
 
@@ -31,7 +31,7 @@ In Functional Programming, "Higher Order Functions" are functions that take othe
 * [Atomic Grouping](http://www.regular-expressions.info/atomic.html) `(?>right|left)` is not supported.
     - This would be a nice feature, and probably not too difficult.
 * [Continuing matches](http://www.regular-expressions.info/continue.html)  `\G` is not supported.
-    - Indirect support with [IExpression.IsMatchAt](blob/master/HighRegex/IExpression.cs)
+    - Indirect support with [IExpression.IsMatchAt](HighRegex/IExpression.cs)
 * [Comments](http://www.regular-expressions.info/comments.html).  `(?# not supported)`
     - you'll probably be using an expression composed of self-documenting, named expressions, making comments unnecessary
 
