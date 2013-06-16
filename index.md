@@ -16,9 +16,10 @@ In Functional Programming, "Higher Order Functions" are functions that take othe
 #### When would I use HighRegex?
 HighRegex uses regex syntax to compose solutions from smaller, understandable expressions.
 
-Features of HighRegex and System.Text.RegularExpressions compared.  [Read more](lessons/2013/06/16/comparison)
+Features of HighRegex and System.Text.RegularExpressions compared.  [Read more](lessons/2013/06/16/api-comparison)
 
-#### HighRegex supports:
+<a name="HighRegex-Supports"></a>
+#### HighRegex Supports
 
 * Classes of arbitrary data types.  Matches exactly 1 position. (See [IClass](https://github.com/jeremyrsellars/HighRegex/blob/master/HighRegex/IClass.cs))
 * Expressions of arbitrary data types.  Matches exactly 0 or more positions. (See [IExpression](https://github.com/jeremyrsellars/HighRegex/blob/master/HighRegex/IExpression.cs))
@@ -45,6 +46,8 @@ Features of HighRegex and System.Text.RegularExpressions compared.  [Read more](
     - Indirect support with [IExpression.IsMatchAt](https://github.com/jeremyrsellars/HighRegex/blob/master/HighRegex/IExpression.cs)
 * [Comments](http://www.regular-expressions.info/comments.html).  `(?# not supported)`
     - you'll probably be using an expression composed of self-documenting, named expressions, making comments unnecessary
+* Replacements.  `Regex.Replace("ABC", "[AEIOU]", "o")`
+    This would be an interesting way to do substitutions or perhaps delete "bad data" from a sequence.
 
 ### More Information
 
