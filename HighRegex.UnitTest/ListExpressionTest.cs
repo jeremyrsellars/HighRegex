@@ -53,21 +53,21 @@ namespace HighRegex
       [ExpectedException (typeof(ArgumentNullException))]
       public void ParamsConstructorThrowArgumentNullExceptionForNullArray()
       {
-         var expression = new ListExpression<char> ((IExpression<char>[]) null);
+         new ListExpression<char> ((IExpression<char>[]) null);
       }
 
       [TestMethod]
       [ExpectedException (typeof(ArgumentNullException))]
       public void ParamsConstructorThrowArgumentNullException()
       {
-         var expression = new ListExpression<char> ((IExpression<char>)null);
+         new ListExpression<char> ((IExpression<char>)null);
       }
 
       [TestMethod]
       public void ParamsConstructorSucceedsForNonNullInput()
       {
          IExpression<char> [] expressions = new [] {m_a, m_any};
-         var expression = new ListExpression<char> (expressions);
+         new ListExpression<char> (expressions);
       }
 
       [TestMethod]

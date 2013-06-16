@@ -7,10 +7,10 @@ namespace HighRegex
    [TestClass]
    public class LookBackExpressionTest
    {
-      private IClass<Char> m_any = new AnyClass<char> ();
-      private IClass<Char> m_A = new CharClass ('A');
-      private IClass<Char> m_B = new CharClass ('B');
-      private IClass<Char> [] m_digits = new []
+      private readonly IClass<Char> m_any = new AnyClass<char> ();
+      private readonly IClass<Char> m_A = new CharClass ('A');
+      private readonly IClass<Char> m_B = new CharClass ('B');
+      private readonly IClass<Char> [] m_digits = new []
       {
          new CharClass ('0'),
          new CharClass ('1'),
@@ -43,7 +43,7 @@ namespace HighRegex
       [ExpectedException (typeof(ArgumentNullException))]
       public void ConstructorThrowArgumentNullExceptionForNullArray()
       {
-         var expression = new LookBackExpression<char> ((IExpression<char>) null);
+         new LookBackExpression<char> ((IExpression<char>) null);
       }
 
       [TestMethod]
@@ -86,7 +86,6 @@ namespace HighRegex
          int length = 0;
 
          var list = DigetsList;
-         int assertionLength;
          var ml = expression.IsMatchAt (list, index);
          Assert.IsTrue (ml.Success, "isMatch");
          Assert.AreEqual (length, ml.Length, "assertionLength");

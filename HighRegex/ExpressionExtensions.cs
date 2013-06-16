@@ -18,7 +18,7 @@ namespace HighRegex
       /// <param name="input">The sequence of items to be tested for a match.</param>
       /// <param name="startat">The character position in the input string at which to begin the search. </param>
       /// <returns>A <c>MatchCollection</c> of the <c>Match</c> objects found by the search.</returns>
-      public static MatchCollection<T> Matches<T> (this IExpression<T> expression, IExpressionItemSource<T> input, int startat)
+      public static MatchCollection<T> Matches<T>(this IExpression<T> expression, IExpressionItemSource<T> input, int startat = 0)
       {
           var matches = GetMatches(expression, input, startat);
           var matchCollection = ToMatchValueCollection (matches);
@@ -33,7 +33,7 @@ namespace HighRegex
       /// <param name="input">The sequence of items to be tested for a match.</param>
       /// <param name="startat">The character position in the input string at which to begin the search. </param>
       /// <returns>A Regular Expression <c>Match</c> object.</returns>
-      public static Match<T> Match<T> (this IExpression<T> expression, IExpressionItemSource<T> input, int startat)
+      public static Match<T> Match<T> (this IExpression<T> expression, IExpressionItemSource<T> input, int startat = 0)
       {
          IMatchProvider<T> matchProvider = expression as IMatchProvider<T> ?? new ExpressionMatchProvider<T> (expression);
          Match<T> match = matchProvider.MatchesCore (input, startat).FirstOrDefault ();
