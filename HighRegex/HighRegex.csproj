@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="AnyClass.cs" />
     <Compile Include="AlternationExpression.cs" />
+    <Compile Include="MatchLength.cs" />
     <Compile Include="NegativeSetClass.cs" />
     <Compile Include="SetClass.cs" />
     <Compile Include="Engine\AnyLengthMatchProvider.cs" />
