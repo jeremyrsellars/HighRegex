@@ -297,7 +297,7 @@ pre {
   margin-left: 0;
   margin-right: 0;
 }
-.unit-article ul, .unit-article ol, .unit-article dl {
+.unit-article ol, .unit-article dl {
   padding-left: 0;
 }
 .unit-article ul {
