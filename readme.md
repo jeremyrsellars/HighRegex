@@ -34,4 +34,6 @@ In Functional Programming, "Higher Order Functions" are functions that take othe
     - Indirect support with [IExpression.IsMatchAt](HighRegex/IExpression.cs)
 * [Comments](http://www.regular-expressions.info/comments.html).  `(?# not supported)`
     - you'll probably be using an expression composed of self-documenting, named expressions, making comments unnecessary
+* Replacements.  `Regex.Replace("ABC", "[AEIOU]", "o")`
+    This would be an interesting way to do substitutions or perhaps delete "bad data" from a sequence.
 
