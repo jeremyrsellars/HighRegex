@@ -54,7 +54,6 @@ namespace HighRegex
       [TestMethod]
       public void IsMatchAtReturnsFalseWhenJustBeforeOfRange()
       {
-         int length;
          MatchLength ml = m_expression.IsMatchAt ("".ToListCursor (), -1);
          Assert.IsFalse (ml.Success);
          Assert.AreEqual (0, ml.Length, "length should be 0");
@@ -63,7 +62,6 @@ namespace HighRegex
       [TestMethod]
       public void IsMatchAtReturnsFalseWhenJustOutOfRange()
       {
-         int length;
          MatchLength ml = m_expression.IsMatchAt ("".ToListCursor (), 1);
          Assert.IsFalse (ml.Success);
          Assert.AreEqual (0, ml.Length, "length should be 0");
@@ -71,7 +69,6 @@ namespace HighRegex
       [TestMethod]
       public void IsMatchAtReturnsFalseWhenOutOfRange()
       {
-         int length;
          MatchLength ml = m_expression.IsMatchAt ("".ToListCursor (), int.MaxValue);
          Assert.IsFalse (ml.Success);
          Assert.AreEqual (0, ml.Length, "length should be 0");
