@@ -69,8 +69,20 @@
   <ItemGroup>
     <Compile Include="AnyClass.cs" />
     <Compile Include="AlternationExpression.cs" />
+    <Compile Include="Class.cs" />
     <Compile Include="MatchLength.cs" />
     <Compile Include="NegativeSetClass.cs" />
+    <Compile Include="ExpressionName.cs" />
+    <Compile Include="ExpressionParser.cs" />
+    <Compile Include="ParsedExpression.cs" />
+    <Compile Include="ParsedExpressionSupport\AlternationExpressionParser.cs" />
+    <Compile Include="ParsedExpressionSupport\ClassParser.cs" />
+    <Compile Include="ParsedExpressionSupport\ExpressionParsingExceptions.cs" />
+    <Compile Include="ParsedExpressionSupport\Extensions.cs" />
+    <Compile Include="ParsedExpressionSupport\GroupParser.cs" />
+    <Compile Include="ParsedExpressionSupport\ListExpressionParser.cs" />
+    <Compile Include="ParsedExpressionSupport\RepetitionRangeTokenParser.cs" />
+    <Compile Include="ParsedExpressionSupport\RepetitionTokenParser.cs" />
     <Compile Include="SetClass.cs" />
     <Compile Include="Engine\AnyLengthMatchProvider.cs" />
     <Compile Include="Engine\ClassLookBackMatchProvider.cs" />
