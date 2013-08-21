@@ -147,6 +147,7 @@
     <Compile Include="RegexTestExtensions.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ParsedExpressionSupport\RegexTokenizerTests.cs" />
     <Compile Include="StartExpressionTest.cs">
       <SubType>Code</SubType>
     </Compile>

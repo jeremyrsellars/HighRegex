@@ -81,6 +81,7 @@
     <Compile Include="ParsedExpressionSupport\Extensions.cs" />
     <Compile Include="ParsedExpressionSupport\GroupParser.cs" />
     <Compile Include="ParsedExpressionSupport\ListExpressionParser.cs" />
+    <Compile Include="ParsedExpressionSupport\RegexTokenizer.cs" />
     <Compile Include="ParsedExpressionSupport\RepetitionRangeTokenParser.cs" />
     <Compile Include="ParsedExpressionSupport\RepetitionTokenParser.cs" />
     <Compile Include="SetClass.cs" />
