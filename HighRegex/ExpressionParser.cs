@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using HighRegex.ParsedExpressionSupport;
 
 namespace HighRegex
 {
@@ -221,14 +222,7 @@ namespace HighRegex
 
       public static string [] Tokenize (string text)
       {
-         List<string> tokens = new List<string> ();
-         var match = Tokenizer.Match (text);
-         while (match.Success)
-         {
-            tokens.Add (match.Value);
-            match = match.NextMatch ();
-         }
-         return tokens.ToArray ();
+         return Tokenizer.Tokenize(text).ToArray ();
       }
 
       public class TokenStream<T>
@@ -289,6 +283,6 @@ namespace HighRegex
          private readonly string [] m_tokens;
       }
 
-      private static readonly Regex Tokenizer = new Regex (@"\(\?\<?[=!]|\[\^?|[?+*]\?|\}\??|[\^\$()\]|{,?*]|[a-zA-Z0-9_]+|\{\d*,\d*\}|\s|.");
+      static readonly RegexTokenizer Tokenizer = new RegexTokenizer(new Regex (@"\(\?\<?[=!]|\[\^?|[?+*]\?|\}\??|[\^\$()\]|{,?*]|[a-zA-Z0-9_]+|\{\d*,\d*\}|\s|."));
    }
 }
